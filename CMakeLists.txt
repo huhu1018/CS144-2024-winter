@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.24.2)
-
 project(minnow CXX)
+
+
+set(CMAKE_CXX_STANDARD 20)
+message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
 
 if(${CMAKE_GENERATOR} STREQUAL "Unix Makefiles")
   set(CMAKE_MAKE_PROGRAM "${PROJECT_SOURCE_DIR}/scripts/make-parallel.sh" CACHE STRING "" FORCE)
